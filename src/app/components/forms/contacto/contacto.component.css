@@ -1,0 +1,19 @@
+.container{
+    margin-top: 30px;
+    padding-top: 40px;
+    background-color: #64dfb7;
+
+}
+table{
+
+  background-color: #945fd0;
+}
+th{
+    color: white;
+    font-family: sans-serif;
+    padding-right: 10px;
+
+}
+tbody{
+  background-color: white;
+}

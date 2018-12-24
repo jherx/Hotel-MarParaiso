@@ -1,0 +1,147 @@
+
+<!-- <div class="container">
+  <div class="form_top">
+    <h1 style="color:#be9e21">Registrate</h1>
+  </div>
+  <form class="form_reg" action="" method="post" id="formulario" name="formulario"
+  #hotelform= "ngForm" (ngSubmit)="addHotel(hotelform)">
+
+    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]= "hotelservice.selecion_hotel._id">
+    <input class="input" name="nombre"  type="text"  #nombre="ngModel" [(ngModel)]="hotelservice.selecion_hotel.nombre"  placeholder="&#55357;&#56420; Nombre"required autofocus>
+    <input class="input" name="correo"  type="email" #correo="ngModel" [(ngModel)]= "hotelservice.selecion_hotel.correo" placeholder="&#9993; Correo"required>
+    <input class="input" name="telefono"  type="number"  #telefono="ngModel" [(ngModel)]="hotelservice.selecion_hotel.telefono" placeholder="&#55357;&#56542;&#32; Telefono"required>
+    <label for="llegada" id="llegada">Fecha de llegada</label>
+    <input class="input" name="fecha_llegada" id="llegada" type="date" #llegada="ngModel" [(ngModel)]= "hotelservice.selecion_hotel.llegada" placeholder="Fecha de llegada">
+    <label for="salida" id="salida">Fecha de salida</label>
+    <input class="input" name="fecha_salida" id="salida" type="date"   #salida="ngModel" [(ngModel)]= "hotelservice.selecion_hotel.salida"  placeholder="Fecha de salida">
+
+  <div class="form-row">
+    <div class="form-inline ">
+      <select  name="habitaciones" id="habitacion" class="custom-select mb-2 mr-sm-2 mb-sm-0"
+#habitacion="ngModel" [(ngModel)]= "hotelservice.selecion_hotel.habitacion">
+        <option>Habitaciones</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-inline">
+
+      <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="adulto" id="adultos"
+#adulto="ngModel" [(ngModel)]= "hotelservice.selecion_hotel.adulto">
+        <option>Adultos</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-inline">
+    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="nino"  id="ninos"
+#nino="ngModel" [(ngModel)]= "hotelservice.selecion_hotel.nino">
+        <option>Niños</option>
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+  </div>
+    <div class="btn_form">
+
+    <button class="btn_submit">Registrar</button>
+    <button class="btn_submit" (click)="resetForm(hotelform)">borrar</button>
+    </div>
+  </form>
+</div>
+
+<script>
+// para validacion de los elementos de un formulario
+(function(){
+  var formulario = document.getElementsByName('formulario')[0],
+  elementos = formulario.elements,
+  boton = elements.getElementsById('btn');
+
+
+  var validarNombre = function(){
+    if(formulario.nombre.value == 0)
+    {
+      e.preventDefault();
+    }
+  };
+
+  var validarEmail = function(){
+    if(formulario.correo.value == 0)
+    {
+      e.preventDefault();
+    }
+  };
+
+  var validarTelefono = function(){
+    if(formulario.tel.value == 0)
+    {
+      e.preventDefault();
+    }
+  };
+  var validarLlegada = function(){
+    if(formulario.llegada.value == 0)
+    {
+      e.preventDefault();
+    }
+  };
+
+  var validarSalida = function(){
+    if(formulario.salida.value == 0)
+    {
+      e.preventDefault();
+    }
+  };
+
+var selectorHabitacion = function(){
+  if(formulario.habitacion.selectedIndex==0)
+  {
+      e.preventDefault();
+    formulario.habitacion.focus();
+  	return false;
+  }
+  return true;
+  }
+
+  var selectorAdulto = function(){
+    if(formulario.adulto.selectedIndex==0)
+    {
+        e.preventDefault();
+      formulario.adulto.focus();
+    	return false;
+    }
+    return true;
+    }
+    var selectorNino = function(){
+      if(formulario.nino.selectedIndex==0)
+      {
+          e.preventDefault();
+        formulario.nino.focus();
+      	return false;
+      }
+      return true;
+      }
+
+  var validar = function(e){
+    validarNombre(e);
+    validarEmail(e);
+    validarTelefono(e);
+    validarLlegada(e);
+    validarSalida(e);
+    selectorHabitacion(e);
+    selectorAdulto(e);
+    selectorNino(e);
+    };
+  formulario.addEventListener("submit",validar);
+}())
+
+</script> -->
