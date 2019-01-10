@@ -42,11 +42,13 @@
 .modal-header{
       BACKGROUND-COLOR: #2a415d;
 }
+
 .navbar-default {
     background-color: transparent;
     border:0px;
     padding: 20px 0;
     transition: all 0.3s;
+
 }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover
@@ -63,6 +65,7 @@
 {
     color: #be9e21;
 }
+
 .navbar-default .navbar-brand {
     color: #fff;
     font-family: 'Poor Story', cursive;
@@ -90,6 +93,7 @@
     color: #fff;
     -webkit-transition: color 0.2s ease-out;
     transition: color 0.2s ease-out;
+
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
     color: #be9e21;

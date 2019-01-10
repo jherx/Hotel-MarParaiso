@@ -1,28 +1,33 @@
-      <div class="container">
-            <nav>
-                  <input type="checkbox" id="nav" class="hidden">
-                  <label for="nav" class="nav-btn">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-
-                  </label>
-                  <div class="logo">
-                    <div class="navbar-header">
-                      <a class="navbar-brand" href="#">
-                        <img src="/assets/img/icon.png" width="30" height="30" alt="">
-                        <p class="navbar-brand" href="#">Hotel<span class="logo-dec">Mar Paraíso</span></p>
-                      </a>
-                    </div>
-                  </div>
-
-                  <!-- <div class="nav-wrapper" >
-                        <ul>
-                              <li>Inicio</li>
-                              <li>Descargas</li>
-                              <li>Descargas</li>
-                              <li>adcds</li>
-                        </ul>
-                  </div> -->
-            </nav>
-      </div>
+<div class="container">
+<div class="row">
+    <div class="demo-gallery">
+      <ul id="lightgallery" class="list-unstyled row">
+        <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/1-375.jpg 375, img/1-480.jpg 480, img/1.jpg 800" data-src="img/1-1600.jpg" data-sub-html="<h4>titulo de imagen</h4><p>Descripcion de la imagen</p>">
+          <a href="">
+              <img class="img-responsive" src="img/thumb-1.jpg">
+          </a>
+        </li>
+      <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/2-375.jpg 375, img/2-480.jpg 480, img/2.jpg 800" data-src="img/2-1600.jpg" data-sub-html="<h4>titulo de imagen</h4><p>Aqui va el texto....</p>">
+          <a href="">
+              <img class="img-responsive" src="img/thumb-2.jpg">
+          </a>
+      </li>
+      <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/13-375.jpg 375, img/13-480.jpg 480, img/13.jpg 800" data-src="img/13-1600.jpg" data-sub-html="<h4>paisajes</h4><p>Recuerda visitar AnthonCode.blogspot.com</p>">
+          <a href="">
+              <img class="img-responsive" src="img/thumb-13.jpg">
+          </a>
+      </li>
+      <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="img/4-375.jpg 375, img/4-480.jpg 480, img/4.jpg 800" data-src="img/4-1600.jpg" data-sub-html="<h4>Visita el canal</h4><p>www.facebook.com/anthonCode</p>">
+          <a href="">
+              <img class="img-responsive" src="img/thumb-4.jpg">
+          </a>
+      </li>
+  </ul>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#lightgallery').lightGallery();
+});
+</script>
+</div>
+</div>
