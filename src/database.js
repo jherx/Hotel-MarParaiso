@@ -1,8 +1,8 @@
-const mongoose= require('mongoose');
+import mongoose, { connect } from 'mongoose';
 const URI = 'mongodb://localhost/hmp_db'
 
-mongoose.connect(URI)
+connect(URI)
   .then(db => console.log('bd conectada'))
   .catch(err => console.error(err));
 
-  module.exports = mongoose;
+  export default mongoose;

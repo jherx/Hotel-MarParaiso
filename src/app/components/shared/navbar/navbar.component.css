@@ -24,6 +24,15 @@
     max-width: 1980px;
   }
 }
+
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.5s ease-in-out;
+  }
+  .navbar.dark-bg {
+    background-color: #333; /* Cambia este color al que desees */
+  } 
+  
 /*-----------------------------------*/
 .header{
     background: url('/assets/img/dd.png') no-repeat fixed;
