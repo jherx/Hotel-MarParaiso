@@ -1,0 +1,196 @@
+/* ===========================
+   CONTAINER
+=========================== */
+
+.reservation {
+    max-width: 720px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+.reservation h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.reservation h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+/* ===========================
+   FORM CONTROLS
+=========================== */
+
+.reservation input,
+.reservation select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid #E5E7EB;
+    background: #F9FAFB;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.reservation input:focus,
+.reservation select:focus {
+    outline: none;
+    border-color: #F97316;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+}
+
+/* Disabled state */
+.reservation input:disabled,
+.reservation select:disabled {
+    background: #F3F4F6;
+    cursor: not-allowed;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.actions button {
+    flex: 1;
+    padding: 0.85rem;
+    border-radius: 10px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Back button */
+.actions button:first-child {
+    background: #E5E7EB;
+    color: #1F2937;
+}
+
+.actions button:first-child:hover:not(:disabled) {
+    background: #D1D5DB;
+}
+
+/* Next / Primary button */
+.actions button:last-child {
+    background: #F97316;
+    color: #ffffff;
+}
+
+.actions button:last-child:hover:not(:disabled) {
+    background: #EA580C;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.25);
+}
+
+.actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ===========================
+   SUMMARY
+=========================== */
+
+.summary-box {
+    background: #FFF7ED;
+    padding: 1.5rem;
+    border-radius: 14px;
+    margin-top: 1.5rem;
+    border: 1px solid #FED7AA;
+}
+
+.summary-box p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.summary-box pre {
+    background: #111827;
+    color: #F9FAFB;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    overflow-x: auto;
+}
+
+/* Confirm button inside summary */
+.reservation button {
+    margin-top: 1.5rem;
+}
+
+/* ===========================
+   SUCCESS STATE
+=========================== */
+
+.success {
+    max-width: 600px;
+    margin: 6rem auto;
+    padding: 3rem;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.success h1 {
+    color: #0E7490;
+    margin-bottom: 1rem;
+}
+
+.success a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: #F97316;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.success a:hover {
+    background: #EA580C;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+    .reservation {
+        margin: 2rem 1rem;
+        padding: 2rem;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+}

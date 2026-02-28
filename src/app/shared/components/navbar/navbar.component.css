@@ -1,0 +1,44 @@
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+background: #0E7490;
+color: #fff;
+}
+
+
+.logo {
+font-weight: bold;
+font-size: 1.3rem;
+}
+
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 1.5rem;
+}
+
+
+.nav-links a {
+color: #fff;
+text-decoration: none;
+}
+
+
+.cta {
+background: #F97316;
+padding: 0.5rem 1rem;
+border-radius: 4px;
+}
+
+
+.lang-switch button {
+margin-left: 0.5rem;
+background: transparent;
+border: 1px solid #fff;
+color: #fff;
+padding: 0.25rem 0.75rem;
+cursor: pointer;
+}

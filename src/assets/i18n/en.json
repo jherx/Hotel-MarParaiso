@@ -1,0 +1,38 @@
+{
+    "home": {
+        "title": "Mar del Paraíso Hotel",
+        "subtitle": "Your perfect stay by the sea",
+        "reserve": "Book now",
+        "welcomeTitle": "Welcome",
+        "welcomeText": "Enjoy an unforgettable beachfront stay.",
+        "roomsTitle": "Rooms",
+        "servicesTitle": "Services"
+    },
+    "services": {
+        "pool": "Swimming pool",
+        "kids": "Kids pool",
+        "breakfast": "Complimentary breakfast",
+        "beach": "Beachfront"
+    },
+    "common": {
+        "viewDetails": "View details",
+        "next": "Next",
+        "back": "Back"
+    },
+    "nav": {
+        "home": "Home",
+        "rooms": "Rooms",
+        "services": "Services",
+        "reserve": "Book"
+    },
+    "reservation": {
+        "title": "Reservation",
+        "dates": "Dates",
+        "room": "Room",
+        "guest": "Guest",
+        "summary": "Summary",
+        "confirm": "Confirm",
+        "name": "Name",
+        "phone": "Phone"
+    }
+}

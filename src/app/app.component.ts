@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -22,5 +23,11 @@ export class AppComponent {
         navbar.classList.remove('dark-bg');
       }
     };
+  }
+
+
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('es');
+    translate.use('es');
   }
 }

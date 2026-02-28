@@ -1,0 +1,38 @@
+{
+    "home": {
+        "title": "Hotel Mar del Paraíso",
+        "subtitle": "Tu mejor experiencia frente al mar",
+        "reserve": "Reservar ahora",
+        "welcomeTitle": "Bienvenido",
+        "welcomeText": "Disfruta una estancia inolvidable frente al mar.",
+        "roomsTitle": "Habitaciones",
+        "servicesTitle": "Servicios"
+    },
+    "services": {
+        "pool": "Alberca",
+        "kids": "Chapoteadero",
+        "breakfast": "Desayuno incluido",
+        "beach": "Frente a la playa"
+    },
+    "common": {
+        "viewDetails": "Ver detalles",
+        "next": "Siguiente",
+        "back": "Atrás"
+    },
+    "nav": {
+        "home": "Inicio",
+        "rooms": "Habitaciones",
+        "services": "Servicios",
+        "reserve": "Reservar"
+    },
+    "reservation": {
+        "title": "Reserva",
+        "dates": "Fechas",
+        "room": "Habitación",
+        "guest": "Huésped",
+        "summary": "Resumen",
+        "confirm": "Confirmar",
+        "name": "Nombre",
+        "phone": "Teléfono"
+    }
+}

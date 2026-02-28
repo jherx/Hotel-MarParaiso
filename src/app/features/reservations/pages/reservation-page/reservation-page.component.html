@@ -1,0 +1,40 @@
+<section class="reservation">
+    <h1>{{ 'reservation.title' | translate }}</h1>
+
+    <div *ngIf="step === 1">
+        <h2>{{ 'reservation.dates' | translate }}</h2>
+        <input type="date" formControlName="checkIn" [formGroup]="reservationForm.get('dates')" />
+        <input type="date" formControlName="checkOut" [formGroup]="reservationForm.get('dates')" />
+    </div>
+
+    <div *ngIf="step === 2">
+        <h2>{{ 'reservation.room' | translate }}</h2>
+        <select formControlName="type" [formGroup]="reservationForm.get('room')">
+            <option value="family">{{ 'rooms.family.title' | translate }}</option>
+            <option value="premium">{{ 'rooms.premium.title' | translate }}</option>
+            <option value="standard">{{ 'rooms.standard.title' | translate }}</option>
+        </select>
+    </div>
+
+    <div *ngIf="step === 3">
+        <h2>{{ 'reservation.guest' | translate }}</h2>
+        <input type="text" placeholder="{{ 'reservation.name' | translate }}" formControlName="name"
+            [formGroup]="reservationForm.get('guest')" />
+        <input type="email" placeholder="Email" formControlName="email" [formGroup]="reservationForm.get('guest')" />
+        <input type="tel" placeholder="{{ 'reservation.phone' | translate }}" formControlName="phone"
+            [formGroup]="reservationForm.get('guest')" />
+    </div>
+
+    <div *ngIf="step === 4">
+        <!-- <pre>{{ reservationForm.value | json }}</pre> -->
+        <h2>{{ 'reservation.summary' | translate }}</h2>
+        <p>Nights: {{ calculateNights() }}</p>
+        <p>Total: {{ calculateTotal() | currency:'USD' }}</p>
+        <button (click)="submit()">{{ 'reservation.confirm' | translate }}</button>
+    </div>
+
+    <div class="actions">
+        <button (click)="back()" [disabled]="step === 1">{{ 'common.back' | translate }}</button>
+        <button (click)="next()" *ngIf="step < 4">{{ 'common.next' | translate }}</button>
+    </div>
+</section>

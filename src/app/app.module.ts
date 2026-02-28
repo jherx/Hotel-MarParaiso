@@ -1,40 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-// rutas
-import {AppRoutingModule} from './rutas';
-
-// component
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
-import { HomeComponent } from './components/home/home.component';
-import { BodyComponent } from './components/home/body/body.component';
-import { RegistrosComponent } from './components/forms/registros/registros.component';
-import { ContactoComponent } from './components/forms/contacto/contacto.component';
-import { HeaderComponent } from './components/shared/header/header.component';
+import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './features/home/home.module';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-//
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    HomeComponent,
-    BodyComponent,
-    RegistrosComponent,
-    ContactoComponent,
-    HeaderComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule,
+    SharedModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
-  providers: [ ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

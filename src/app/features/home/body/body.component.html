@@ -1,0 +1,39 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>{{ 'home.title' | translate }}</h1>
+    <p>{{ 'home.subtitle' | translate }}</p>
+    <button class="btn-primary">{{ 'home.reserve' | translate }}</button>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section class="welcome">
+  <h2>{{ 'home.welcomeTitle' | translate }}</h2>
+  <p>{{ 'home.welcomeText' | translate }}</p>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms">
+  <h2>{{ 'home.roomsTitle' | translate }}</h2>
+  <div class="room-grid">
+    <div class="room-card" *ngFor="let room of rooms">
+      <img [src]="room.image" alt="room" />
+      <h3>{{ room.title | translate }}</h3>
+      <p>{{ room.description | translate }}</p>
+      <button class="btn-secondary">{{ 'common.viewDetails' | translate }}</button>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <h2>{{ 'home.servicesTitle' | translate }}</h2>
+  <div class="service-grid">
+    <div class="service" *ngFor="let service of services">
+      <span class="icon">{{ service.icon }}</span>
+      <p>{{ service.label | translate }}</p>
+    </div>
+  </div>
+</section>

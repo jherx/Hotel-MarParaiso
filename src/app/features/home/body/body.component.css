@@ -1,0 +1,246 @@
+/* ===============================
+   VARIABLES (Sistema visual)
+================================= */
+
+:root {
+  --primary: #0E7490;
+  --primary-dark: #0C5F75;
+  --accent: #F97316;
+  --text-dark: #111827;
+  --text-muted: #6B7280;
+  --bg-light: #F9FAFB;
+}
+
+/* ===============================
+   HERO
+================================= */
+
+.hero {
+  position: relative;
+  height: 95vh;
+  background: url('/assets/images/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.35));
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 850px;
+  padding: 1rem;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #E5E7EB;
+}
+
+/* ===============================
+   BUTTON SYSTEM
+================================= */
+
+.btn-primary,
+.btn-secondary {
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.85rem 2.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(14, 116, 144, 0.3);
+}
+
+.btn-secondary {
+  margin: 1rem 0 2rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1.6rem;
+  border-radius: 6px;
+}
+
+.btn-secondary:hover {
+  background: #EA580C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.25);
+}
+
+/* ===============================
+   SECTIONS
+================================= */
+
+.welcome,
+.rooms,
+.services {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.welcome {
+  background: #ffffff;
+}
+
+.rooms {
+  background: var(--bg-light);
+}
+
+.services {
+  background: #ffffff;
+}
+
+.welcome h2,
+.rooms h2,
+.services h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.welcome p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* ===============================
+   ROOM CARDS
+================================= */
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.room-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.room-card h3 {
+  margin: 1.2rem 0 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+.room-card p {
+  padding: 0 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.room-card .btn-secondary {
+  margin-bottom: 1.8rem;
+}
+
+/* ===============================
+   SERVICES
+================================= */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.service {
+  background: #FFF7ED;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* ===============================
+   ANIMATIONS
+================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .welcome,
+  .rooms,
+  .services {
+    padding: 3.5rem 1.5rem;
+  }
+}

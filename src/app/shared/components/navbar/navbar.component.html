@@ -1,0 +1,25 @@
+<nav class="navbar">
+  <div class="logo">Mar del Paraíso</div>
+
+  <ul class="nav-links">
+    <li>
+      <a routerLink="/home">{{ "nav.home" | translate }}</a>
+    </li>
+    <li>
+      <a routerLink="/rooms">{{ "nav.rooms" | translate }}</a>
+    </li>
+    <li>
+      <a routerLink="/services">{{ "nav.services" | translate }}</a>
+    </li>
+    <li>
+      <a routerLink="/reservations" class="cta">{{
+        "nav.reserve" | translate
+      }}</a>
+    </li>
+  </ul>
+
+  <div class="lang-switch">
+    <button (click)="changeLang('es')">ES</button>
+    <button (click)="changeLang('en')">EN</button>
+  </div>
+</nav>
